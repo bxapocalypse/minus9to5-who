@@ -6,6 +6,16 @@
   align-items: center;
 }
 
+.breadcrumb {
+  @include respond(small-tab-port) {
+    width: 100%;
+    flex-wrap: nowrap !important;
+    align-content: center;
+    margin: 0;
+    justify-content: space-between;
+  }
+}
+
 .breadcrumbs__ul {
   margin: 0;
   padding: 0;
@@ -22,4 +32,13 @@
 
 .breadcrumbs__ul__li a:visited {
   color: #000;
+}
+
+.breadcrumbs__nav {
+  width: 100%;
+  @include respond(small-tab-port) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

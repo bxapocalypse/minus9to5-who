@@ -1,7 +1,7 @@
        <footer class="footer">
             <div class="footer__top">
                 <a href="/">
-                    <img src="/media/minus_9_to_5_media/images/topbar__logo-img.png" alt="EVMS logo" class="footer__top-logo">
+                    <img src="images/topbar__logo-img.png" alt="EVMS logo" class="footer__top-logo">
                 </a>
                 <div class="footer__top-txt">
                     Minus 9 to 5 is a collective impact initiative of the M. Foscue Brock Institute for Community and Global Health, housed in the Department of Pediatrics, Eastern Virginia Medical School.

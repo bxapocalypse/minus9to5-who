@@ -1,10 +1,9 @@
 
-
-
         <section class="steering">
             <div class="staff__inner">
 
 <?php
+
 
 //Include database connection file
 require 'functions/db_connect.php';
@@ -21,7 +20,7 @@ try {
                         echo '</div>';
                         //staff__inner__staffer-img ends
 
-                        echo "<p class='staff__inner__staffer-name'>" . $row['first_name'] . "</p>";
+                        echo "<p class='staff__inner__staffer-name'>" . $row['first_name'] . " " . $row['last_name'] . "</p>";
                         echo "<p class='staff__inner__staffer-pos'>" . $row['title'] . "</p>";
                     echo "</a>";
                     echo "<div class='staff__inner__staffer-bg'></div>";
@@ -42,3 +41,4 @@ try {
 
             </div><!--staff__inner ends-->
         </section><!--staff ends-->
+

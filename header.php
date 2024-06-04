@@ -1,4 +1,12 @@
 
+<?php
+
+include_once("functions/functions.php");
+
+$current_url = $_SERVER['REQUEST_URI'];
+$breadcrumb = get_breadcrumb($site_structure, $current_url);
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +31,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/hbc2bmr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -82,7 +93,7 @@
         <div class="secondaryTopbar">
             <div class="secondaryTopbar__inner">
                 <div class="secondaryTopbar__inner__logo">
-                    <a href="/"><img class="topbar__inner__logo-img" src="/media/minus_9_to_5_media/images/topbar__logo-img.png" alt="EVMS Logo" /></a>
+                    <a href="/"><img class="topbar__inner__logo-img" src="images/topbar__logo-img.png" alt="EVMS Logo" /></a>
                 </div><!--topbar__logo ends-->
 
                 <nav class="secondaryTopbar__inner__nav" aria-label="Secondary Navigation">
@@ -325,8 +336,15 @@
             </h1>
         </section>
 
-        <div class="breadcrumbs" aria-label="breadcrumbs Navigation">
-            <ul class="breadcrumbs__ul">
+        
+            <!-- <div class="breadcrumbs" aria-label="breadcrumbs Navigation">
+                <ul class="breadcrumbs__ul">
                 <ul class="breadcrumbs__ul__li"><a href="/">Minus 9 to 5</a>&nbsp; / &nbsp;<a href="/about/">About Us</a>&nbsp; / &nbsp;<a href="/about/who_we_are/">Who We Are</a>&nbsp; / &nbsp;Our Staff</li>
-                </ul>
-        </div>
+                </ul> 
+            </div> -->
+
+                <?php
+                    display_breadcrumb($breadcrumb, $current_url);
+
+                ?> 
+        

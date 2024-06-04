@@ -5,14 +5,6 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-//Database credentials
-
-// $host = 'localhost';
-// $db = 'minus9to5';
-// $user = 'minususer';
-// $pass = 'minus703';
-// $charset = 'utf8mb4';
-
 // Database credentials from environment variables
 $host = $_ENV['DB_HOST'];
 $db = $_ENV['DB_NAME'];

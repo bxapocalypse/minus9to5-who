@@ -7,6 +7,9 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 3px 3px 3px #777;
+  @include respond(small-tab-port) {
+    height: auto;
+  }
 }
 
 .secondaryTopbar__inner {
@@ -14,11 +17,33 @@
   max-width: 1200px;
   height: 70px;
   display: flex;
+  @include respond(small-tab-port) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .secondaryTopbar__inner__logo {
   width: 25%;
   margin-left: 45px;
+  @include respond(small-tab-port) {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.secondaryTopbar__inner__logo a {
+  width: 80%;
+  @include respond(small-tab-port) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .secondaryTopbar__inner__nav__ul {
@@ -31,6 +56,13 @@
   margin: 0px 0px 0px auto;
   text-transform: uppercase;
   text-align: center;
+  @include respond(big-desktop) {
+    height: 70px;
+  }
+  @include respond(small-tab-port) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .secondaryTopbar__inner__nav__ul-li a {
@@ -38,23 +70,30 @@
   color: #000;
   display: block;
   padding: 17px 24px 17px 24px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .topbar__inner__logo-img {
   height: 90%;
   border: 0;
   margin: 2px 0px;
+  @include respond(small-tab-port) {
+    width: 80%;
+    height: auto;
+  }
 }
 
 .secondaryTopbar__inner__nav {
   width: 65%;
   height: 70px;
   transition: all 0.5s;
-}
-
-@media only screen and (max-width: 1920px) {
-  .secondaryTopbar__inner__nav__ul {
-    height: 70px;
+  @include respond(small-tab-port) {
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    margin-top: 15px;
   }
 }
 

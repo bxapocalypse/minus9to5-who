@@ -12,6 +12,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include respond(small-tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .steering .staff__inner__staffer {
@@ -23,6 +27,9 @@
   flex-direction: column;
   align-items: center;
   margin-top: 150px;
+  @include respond(small-tab-port) {
+    width: 100%;
+  }
 }
 
 .staff__inner__staffer a {
@@ -54,6 +61,9 @@
   text-align: center;
   font-size: 1.25em;
   margin: 10px 0;
+  @include respond(small-tab-port) {
+    font-size: 2rem;
+  }
 }
 
 .steering .staff__inner__staffer-bg {
@@ -68,13 +78,10 @@
   bottom: 0;
 }
 
-.steering .staff__inner__staffer {
-  content: '';
-  width: 30%;
-  height: 300px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 150px;
+.staff__inner__staffer-pos {
+  width: 100%;
+  text-align: center;
+  @include respond(small-tab-port) {
+    font-size: 1.5rem;
+  }
 }

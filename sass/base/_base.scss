@@ -10,7 +10,22 @@
 @import url('https://use.typekit.net/rko5ypq.css');
 
 html {
-  font-size: 18px;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(big-desktop) {
+    font-size: 100%; //1rem = 12, 12/16
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 75%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 60%; //1 rem = 9px, 9/16 = 50%
+  }
 }
 
 body {
@@ -20,6 +35,23 @@ body {
   font-family: $myDefaultFont, sans-serif;
   font-weight: 200;
   line-height: 1.5em;
+}
+
+a:link {
+  color: $color-black;
+}
+
+a:hover {
+  color: $color-grey;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $color-primary-light;
+}
+
+a:active {
+  color: $color-primary-dark;
 }
 
 .wrapper {
@@ -144,39 +176,6 @@ h2 {
   display: block;
   background-color: #f0a711;
   margin: 10px 0;
-}
-
-.generalContent__p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 15px 0;
-  padding: 10px 15px;
-  text-align: left;
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.generalContent__p p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 15px 0;
-  width: 100%;
-}
-
-.generalContent__p a {
-  text-decoration: underline;
-  color: #4f78a1;
-}
-
-.generalContent__yellow {
-  border: 3px solid #e6a93e;
-  padding: 24px;
-  width: 75%;
-  max-width: 1200px;
-  margin: 60px 0px 0px 0px;
 }
 
 .container {

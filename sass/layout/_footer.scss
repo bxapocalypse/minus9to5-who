@@ -16,6 +16,11 @@
   align-items: center;
   border-bottom: 0.1em #999 solid;
   padding: 1.5em;
+  @include respond(small-tab-port) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
 }
 
 .footer__top a {
@@ -23,6 +28,9 @@
   width: 15%;
   height: auto;
   margin: 1em;
+  @include respond(small-tab-port) {
+    width: 50%;
+  }
 }
 
 .footer__top-logo {
@@ -42,11 +50,18 @@
   width: 70%;
   display: flex;
   margin-top: 15px;
+  @include respond(small-tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer__threebox-box {
   width: 32%;
   padding: 10px;
+  @include respond(small-tab-port) {
+    width: 80%;
+  }
 }
 
 .footer__threebox-box-title {
