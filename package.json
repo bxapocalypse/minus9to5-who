@@ -1,0 +1,22 @@
+{
+  "name": "minus-who-we-are",
+  "version": "1.0.0",
+  "description": "PHP JSON Project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bxapocalypse/"
+  },
+  "keywords": [
+    "PHP",
+    "JSON"
+  ],
+  "author": "Jhon Thomas",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

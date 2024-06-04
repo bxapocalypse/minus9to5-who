@@ -1,0 +1,38 @@
+.blue__header {
+  width: 100%;
+  padding: 60px 0px;
+  margin-bottom: 40px;
+  color: #fff;
+  background-color: #31667d;
+  box-shadow: inset 1px 1px 1xp #000;
+  font-family: 'myLightFont', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva',
+    Arial, sans-serif;
+  line-height: 15px;
+  text-align: center;
+}
+
+.blue__header__title {
+  font-size: 3em;
+  line-height: 1.5em;
+  width: 100%;
+  font-weight: bold;
+}
+
+.blue__header__title:after {
+  content: ' ';
+  width: 54px;
+  height: 4px;
+  display: block;
+  background-color: #f0a711;
+  position: relative;
+  margin: 0 auto;
+  top: 20px;
+}
+
+.bold__font {
+  font-weight: 700;
+  font-style: normal;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
